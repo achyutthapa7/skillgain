@@ -1,0 +1,15 @@
+.buttondiv {
+  display: flex;
+  justify-content: center;
+}
+.loginbtn {
+  width: 40%;
+  padding: 12px;
+  border-radius: 20px;
+  outline-width: none;
+  border: 0;
+  background-color: #4f4fd0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
