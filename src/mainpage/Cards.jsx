@@ -3,6 +3,7 @@ import React from "react";
 import QuestionAnswerOutlinedIcon from "@mui/icons-material/QuestionAnswerOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import math from "/src/image/math.jpg";
 const Cards = () => {
   return (
     <div>
@@ -34,8 +35,8 @@ const Cards = () => {
         </div>
         <div className="imagediv">
           <img
-            src="/src/image/math.jpg"
-            alt=""
+            src={math}
+            alt="math"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
