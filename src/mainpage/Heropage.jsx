@@ -50,7 +50,7 @@ const Heropage = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  display: { lg: "flex", md: "flex", xs: "none", xs: "none" },
+                  display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
                 }}
               >
                 Trending
@@ -78,7 +78,7 @@ const Heropage = () => {
               <Typography
                 variant="h5"
                 sx={{
-                  display: { lg: "flex", md: "flex", xs: "none", xs: "none" },
+                  display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
                 }}
               >
                 Latest
