@@ -116,9 +116,7 @@ const Heropage = () => {
           }}
         >
           <Rightboxtop />
-          <Box sx={{ padding: "10px 30px" }}>
-            <Messages />
-          </Box>
+          <Box></Box>
         </Box>
       </section>
     </div>

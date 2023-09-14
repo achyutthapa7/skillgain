@@ -6,7 +6,7 @@ const MessageCards = (props) => {
     <>
       <Box
         sx={{
-          width: "100%",
+          width: "80%",
           cursor: "pointer",
           display: "flex",
           alignItems: "flex-start",
@@ -17,7 +17,7 @@ const MessageCards = (props) => {
           <Avatar>{props.avatar}</Avatar>
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <Typography component="p" sx={{ fontSize: "20px" }}>
+          <Typography component="p" sx={{ fontSize: "18pxx" }}>
             {props.name}
           </Typography>
           <Typography component="p" sx={{ fontSize: "10px", color: "#865555" }}>

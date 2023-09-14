@@ -67,6 +67,48 @@ const Messages = () => {
         message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
             earum, dolor illo explicabo nostrum error."
       />
+
+      <MessageCards
+        name="Sarthak GC"
+        avatar="S"
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            earum, dolor illo explicabo nostrum error."
+      />
+
+      <MessageCards
+        name="Sarthak GC"
+        avatar="S"
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            earum, dolor illo explicabo nostrum error."
+      />
+
+      <MessageCards
+        name="Sarthak GC"
+        avatar="S"
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            earum, dolor illo explicabo nostrum error."
+      />
+
+      <MessageCards
+        name="Sarthak GC"
+        avatar="S"
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            earum, dolor illo explicabo nostrum error."
+      />
+
+      <MessageCards
+        name="Sarthak GC"
+        avatar="S"
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            earum, dolor illo explicabo nostrum error."
+      />
+
+      <MessageCards
+        name="Sarthak GC"
+        avatar="S"
+        message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            earum, dolor illo explicabo nostrum error."
+      />
     </>
   );
 };

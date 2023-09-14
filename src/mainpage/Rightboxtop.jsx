@@ -1,7 +1,8 @@
-import { Avatar, Box, Tooltip } from "@mui/material";
+import { Avatar, Box, Button, Tooltip } from "@mui/material";
 import React from "react";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import MarkChatReadOutlinedIcon from "@mui/icons-material/MarkChatReadOutlined";
+import Messagedialoguebox from "./Messagedialoguebox";
 const Rightboxtop = () => {
   return (
     <>
@@ -23,17 +24,19 @@ const Rightboxtop = () => {
         }}
       >
         <Tooltip title="notifications">
-          <NotificationsNoneOutlinedIcon
-            sx={{ fontSize: "35px", cursor: "pointer" }}
-          />
+          <Button>
+            <NotificationsNoneOutlinedIcon
+              sx={{ fontSize: "35px", cursor: "pointer", fill: "black" }}
+            />
+          </Button>
         </Tooltip>
         <Tooltip title="messages">
-          <MarkChatReadOutlinedIcon
-            sx={{ fontSize: "30px", cursor: "pointer" }}
-          />
+          <Messagedialoguebox />
         </Tooltip>
         <Tooltip title="profile">
-          <Avatar sx={{ cursor: "pointer" }}>A</Avatar>
+          <Button>
+            <Avatar sx={{ cursor: "pointer" }}>A</Avatar>
+          </Button>
         </Tooltip>
       </Box>
     </>

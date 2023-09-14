@@ -1,11 +1,10 @@
-import { Avatar, Box, Tooltip } from "@mui/material";
+import { Avatar, Box, Button, Tooltip } from "@mui/material";
 import React from "react";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import MarkChatReadOutlinedIcon from "@mui/icons-material/MarkChatReadOutlined";
 import "./Main.css";
-
+import Drawermenu from "../Drawermenu";
+import Messagedialoguebox from "./Messagedialoguebox";
 const Middleboxtop = () => {
   return (
     <>
@@ -38,26 +37,22 @@ const Middleboxtop = () => {
           }}
         >
           <Tooltip title="notifications">
-            <NotificationsNoneOutlinedIcon
-              sx={{ fontSize: "30px", cursor: "pointer" }}
-            />
+            <Button>
+              <NotificationsNoneOutlinedIcon
+                sx={{ fontSize: "30px", cursor: "pointer", fill: "black" }}
+              />
+            </Button>
           </Tooltip>
           <Tooltip title="messages">
-            <MarkChatReadOutlinedIcon
-              sx={{ fontSize: "25px", cursor: "pointer" }}
-            />
+            <Messagedialoguebox />
           </Tooltip>
           <Tooltip title="profile">
             <Avatar sx={{ cursor: "pointer" }}>A</Avatar>
           </Tooltip>
         </Box>
-        <Box
-          sx={{
-            display: { lg: "none", md: "none", sm: "none", xs: "flex" },
-          }}
-        >
-          <MenuOutlinedIcon sx={{ paddingRight: "15px" }} />
-        </Box>
+        <Button>
+          <Drawermenu />
+        </Button>
       </Box>
     </>
   );
