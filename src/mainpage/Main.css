@@ -1,0 +1,101 @@
+.hero {
+  background-color: #ffffff;
+  display: flex;
+  /* gap: 10px; */
+  position: relative;
+  overflow-y: hidden;
+}
+.leftbox {
+  border: 1px solid rgb(203, 172, 172);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 25%;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.middlebox {
+  border: 1px solid rgb(203, 172, 172);
+  height: 100vh;
+  flex: 1;
+  overflow: auto;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.middlebox::-webkit-scrollbar {
+  display: none;
+}
+
+.rightbox {
+  border: 1px solid rgb(203, 172, 172);
+  height: 100vh;
+  width: 35%;
+  position: sticky;
+  top: 0;
+  right: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  overflow: scroll;
+}
+.rightbox::-webkit-scrollbar {
+  display: none;
+}
+.searchinput {
+  outline: none;
+
+  flex: 1;
+  height: 100%;
+  border: navajowhite;
+  background-color: #ffffff;
+
+  font-size: 17px;
+}
+.searchinput::placeholder {
+  color: gray;
+}
+.card {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(203, 172, 172);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding-top: 60px;
+  /* padding-bottom: 60px; */
+}
+.profilediv {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.statusdiv {
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.imagediv {
+  /* background-color: brown; */
+  width: 100%;
+  height: 300px;
+}
+.interactiondiv {
+  /* background-color: rgb(224, 190, 190); */
+  width: 100%;
+  height: 130px;
+}
+.currentel {
+  position: relative;
+}
+.background::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: black;
+  transform: translateY(40px);
+}

@@ -29,7 +29,7 @@ const Login = () => {
   };
   const checkInput = () => {
     if (email != "" && password != "") {
-      navigate("/interest");
+      navigate("/home");
     } else if (email == "" || password == "") {
       alert("cannot leave space");
     }

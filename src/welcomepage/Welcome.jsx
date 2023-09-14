@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Welcome.css";
 import videosrc from "/src/video/bgvideo.mp4";
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Modal from "@mui/material/Modal";
 import Login from "../loginpage/Login";
 import login from "/src/image/login.png";
 import { Bounce } from "react-reveal";
-
 import Offers from "./Offers";
+import logo from "/src/image/logo.png";
+import { useNavigate } from "react-router-dom";
 const Welcome = () => {
-  const [open, setOpen] = React.useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  const navigate = useNavigate();
+  const handleclick = () => {
+    navigate("/home");
+  };
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const style = {
@@ -18,7 +37,7 @@ const Welcome = () => {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "90%",
-    background: "blue",
+    background: { md: "blue", xs: "white" },
     boxShadow: 24,
     height: "90%",
     overflow: {
@@ -29,6 +48,58 @@ const Welcome = () => {
 
   return (
     <div>
+      <Box
+        sx={{
+          position: "absolute",
+          zIndex: "1",
+          top: "30px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <Box>
+          <Avatar
+            src={logo}
+            sx={{ width: "70px", height: "70px", cursor: "pointer" }}
+          ></Avatar>
+        </Box>
+        <Box sx={{ position: "relative" }}>
+          <Button
+            variant="contained"
+            onClick={handleclick}
+            sx={{
+              width: "200px",
+              background: "none",
+              fontWeight: "bolder",
+              boxShadow: "none",
+              letterSpacing: "2px",
+              color: "black",
+              ":hover": {
+                color: "black",
+                background: "none",
+              },
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            Browse as Guest
+          </Button>
+          <span
+            style={{
+              width: isHovered ? "200px" : "0px",
+              height: "2px",
+              background: "black",
+              position: "absolute",
+              left: 0,
+              bottom: 0,
+              transition: "width 0.3s ease",
+            }}
+          ></span>
+        </Box>
+      </Box>
+
       <section className="main">
         <div className="bgvideodiv">
           <video
@@ -40,13 +111,14 @@ const Welcome = () => {
             style={{ filter: "blur(1.2px)" }}
           />
         </div>
+
         <div className="message">
           <div className="welcome">
             <Typography
               variant="h2"
               sx={{ fontSize: { md: "80px", xs: "60px" } }}
             >
-              Welcome to Skillgain
+              Welcome to IdeaSkool
             </Typography>
             <Box
               sx={{
