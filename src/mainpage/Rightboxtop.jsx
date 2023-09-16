@@ -30,9 +30,9 @@ const Rightboxtop = () => {
             />
           </Button>
         </Tooltip>
-        <Tooltip title="messages">
-          <Messagedialoguebox />
-        </Tooltip>
+
+        <Messagedialoguebox />
+
         <Tooltip title="profile">
           <Button>
             <Avatar sx={{ cursor: "pointer" }}>A</Avatar>

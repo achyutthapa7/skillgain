@@ -11,7 +11,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 25%;
+
   border-left: 0;
   border-top: 0;
   border-bottom: 0;
@@ -33,7 +33,7 @@
 .rightbox {
   border: 1px solid rgb(203, 172, 172);
   height: 100vh;
-  width: 35%;
+  width: 25%;
   position: sticky;
   top: 0;
   right: 0;
@@ -52,7 +52,7 @@
   height: 100%;
   border: navajowhite;
   background-color: #ffffff;
-
+  padding-right: 20px;
   font-size: 17px;
 }
 .searchinput::placeholder {
@@ -61,12 +61,16 @@
 .card {
   width: 100%;
   height: auto;
-  border: 1px solid rgb(203, 172, 172);
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
-  padding-top: 60px;
-  /* padding-bottom: 60px; */
+  position: relative;
+  padding: 60px 0;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 123%;
+  background-color: rgb(203, 172, 172);
+  transform: translateX(-60px);
 }
 .profilediv {
   display: flex;

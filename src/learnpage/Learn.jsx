@@ -14,7 +14,7 @@ const Learn = () => {
       <section className="hero">
         <Box
           className="leftbox"
-          sx={{ width: { md: "20%", lg: "25%", sm: "15%", xs: "0%" } }}
+          sx={{ width: { md: "20%", lg: "20%", sm: "15%", xs: "0%" } }}
         >
           <Leftboxtop />
           <Box></Box>
@@ -28,6 +28,12 @@ const Learn = () => {
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
+              padding: {
+                lg: "0 70px",
+                md: "0 40px",
+                sm: "0 25px",
+                xs: "0 5px ",
+              },
             }}
           >
             <Slide right>

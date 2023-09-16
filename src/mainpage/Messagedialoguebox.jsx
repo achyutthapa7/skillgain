@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
-import { Avatar, Box, Button } from "@mui/material";
+import { Avatar, Box, Button, Tooltip } from "@mui/material";
 import MarkChatReadOutlinedIcon from "@mui/icons-material/MarkChatReadOutlined";
 import Messages from "./Messages";
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -26,11 +26,13 @@ const Messagedialoguebox = (props) => {
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>
-        <MarkChatReadOutlinedIcon
-          sx={{ fontSize: "30px", cursor: "pointer", fill: "black" }}
-        />
-      </Button>
+      <Tooltip title="Messages">
+        <Button onClick={handleClickOpen}>
+          <MarkChatReadOutlinedIcon
+            sx={{ fontSize: "30px", cursor: "pointer", fill: "black" }}
+          />
+        </Button>
+      </Tooltip>
       <Dialog
         fullScreen
         open={open}

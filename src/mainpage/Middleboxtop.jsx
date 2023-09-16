@@ -50,7 +50,9 @@ const Middleboxtop = () => {
             <Avatar sx={{ cursor: "pointer" }}>A</Avatar>
           </Tooltip>
         </Box>
-        <Button>
+        <Button
+          sx={{ display: { lg: "none", md: "none", sm: "none", xs: "flex" } }}
+        >
           <Drawermenu />
         </Button>
       </Box>

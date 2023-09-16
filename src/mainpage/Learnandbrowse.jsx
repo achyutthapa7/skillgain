@@ -20,7 +20,7 @@ const Learnandbrowse = () => {
           justifyContent: "center",
           alignContent: "center",
           gap: { lg: "100px", md: "200px", sm: "170px", xs: "70px" },
-          padding: "30px 0",
+          padding: "10px 0",
         }}
       >
         <Box sx={{ cursor: "pointer" }}>
