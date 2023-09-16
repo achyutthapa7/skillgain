@@ -9,7 +9,7 @@ const Learnandbrowse = () => {
     navigate("/learn");
   };
   const Gotobrowse = () => {
-    navigate("/home");
+    navigate("/browse");
   };
 
   return (

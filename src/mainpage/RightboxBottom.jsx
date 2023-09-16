@@ -20,34 +20,29 @@ const RightboxBottom = () => {
   };
 
   useEffect(() => {
-    // Initial call when the component mounts
-    quoteGenerator();
-
-    // Calculate the time to the next day
-    const now = new Date();
+    const storedTimestamp = localStorage.getItem("quoteTimestamp");
     const oneDayInMillis = 24 * 60 * 60 * 1000; // 1 day in milliseconds
-    const nextDayInMillis = now.getTime() + oneDayInMillis;
 
-    // Calculate the delay until the next day
-    const delayMillis = nextDayInMillis - now.getTime();
-
-    // Call quoteGenerator after 1 day
-    const timeoutId = setTimeout(() => {
+    if (!storedTimestamp) {
+      // No stored timestamp, fetch a new quote and set the timestamp
       quoteGenerator();
-      // Schedule the next call after another day
-      setInterval(quoteGenerator, oneDayInMillis);
-    }, delayMillis);
+      localStorage.setItem("quoteTimestamp", Date.now().toString());
+    } else {
+      const lastFetchTime = parseInt(storedTimestamp, 10);
+      const currentTime = Date.now();
+      const timeElapsed = currentTime - lastFetchTime;
 
-    return () => {
-      // Clear the timeout when the component unmounts to prevent memory leaks
-      clearTimeout(timeoutId);
-    };
+      if (timeElapsed >= oneDayInMillis) {
+        // More than a day has passed since the last fetch, so fetch a new quote and update the timestamp
+        quoteGenerator();
+        localStorage.setItem("quoteTimestamp", Date.now().toString());
+      }
+    }
   }, []);
 
   const containerStyles = {
     display: "flex",
     justifyContent: "center",
-    paddingTop: "80px",
     padding: "80px 20px",
     height: "100%",
   };
@@ -62,10 +57,11 @@ const RightboxBottom = () => {
     alignItems: "center",
     flexDirection: "column",
     borderRadius: "10px",
-    boxShadow: "-2px 7px 20px -1px gray",
-    transition: "transform 200ms ease",
+
+    transition: "all 200ms ease",
     ":hover": {
       transform: "scale(0.9)",
+      boxShadow: "-2px 7px 20px -1px gray",
     },
   };
 

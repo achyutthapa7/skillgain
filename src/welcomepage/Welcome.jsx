@@ -26,7 +26,7 @@ const Welcome = () => {
   };
   const navigate = useNavigate();
   const handleclick = () => {
-    navigate("/home");
+    navigate("/browse");
   };
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);

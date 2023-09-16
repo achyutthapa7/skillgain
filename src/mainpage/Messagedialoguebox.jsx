@@ -3,7 +3,6 @@ import Dialog from "@mui/material/Dialog";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import { Avatar, Box, Button, Tooltip } from "@mui/material";
@@ -57,7 +56,6 @@ const Messagedialoguebox = (props) => {
             display: "flex",
             gap: "10px",
             height: "100vh",
-            border: "1px solid black",
           }}
         >
           <Box
@@ -73,7 +71,7 @@ const Messagedialoguebox = (props) => {
           >
             <Messages />
           </Box>
-          <Box sx={{ flex: 1, border: "1px solid blue" }}></Box>
+          <Box sx={{ flex: 1 }}></Box>
         </Box>
       </Dialog>
     </div>

@@ -8,6 +8,7 @@ import Learnandbrowse from "../mainpage/learnandbrowse";
 
 import { Bounce, Fade, Slide } from "react-reveal";
 import Cards from "../mainpage/Cards";
+import RightboxBottom from "../mainpage/RightboxBottom";
 const Learn = () => {
   return (
     <>
@@ -50,7 +51,7 @@ const Learn = () => {
           sx={{ display: { md: "none", xs: "none", lg: "block" } }}
         >
           <Rightboxtop />
-          <Box></Box>
+          <RightboxBottom />
         </Box>
       </section>
     </>

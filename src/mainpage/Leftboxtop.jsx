@@ -28,7 +28,12 @@ const Leftboxtop = () => {
           Idea<span style={{ color: "blue" }}>Skool</span>
         </Typography>
 
-        <Box sx={{ display: { md: "flex", lg: "none" }, cursor: "pointer" }}>
+        <Box
+          sx={{
+            display: { md: "flex", lg: "none", sm: "flex", xs: "none" },
+            cursor: "pointer",
+          }}
+        >
           <img src={logo} alt="logo" style={{ width: "70px" }} />
         </Box>
       </Box>
